@@ -8,7 +8,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"github.com/joho/godotenv"
 	"net/http"
-	"os"
+	
 	"strings"
 	"unicode"
 	//"net/url"
@@ -16,15 +16,7 @@ import (
 )
 
 func main() {
-	// loads values from .env into the system
-	if err := godotenv.Load(); err != nil {
-		fmt.Print("No .env file found")
-	}
-	// Get the PORT environment variable
-	port, exists := os.LookupEnv("PORT")
-	if exists {
-		fmt.Println(port)
-	}
+
 
 	http.HandleFunc("/hello", hello)
 
@@ -39,7 +31,7 @@ func main() {
 		})
 	})
 
-	http.ListenAndServe(":"+port, nil)
+	http.ListenAndServe(":8080", nil)
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
