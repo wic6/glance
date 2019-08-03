@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"github.com/DavidBelicza/TextRank"
 	"github.com/PuerkitoBio/goquery"
-	"github.com/joho/godotenv"
 	"net/http"
 	
 	"strings"
