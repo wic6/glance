@@ -58,7 +58,7 @@ func customTextRank(url string) []string {
 	tr.Ranking(algorithmDef)
 
 	// Get the most important 4 sentences. Importance by word occurrence.
-	sentences := textrank.FindSentencesByWordQtyWeight(tr, 4)
+	sentences := textrank.FindSentencesByRelationWeight(tr, 4)
 
 	// Put just the sentences in slice
 	for _, s := range sentences {
